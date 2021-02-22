@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include <projectsg/physics/vectors.hpp>
+#include <projectsg/physics/vectors.ipp>
 
 int main()
 {
