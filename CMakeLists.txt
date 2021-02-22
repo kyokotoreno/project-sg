@@ -10,6 +10,7 @@ add_subdirectory(projectsg-gui)
 add_subdirectory(projectsg-physics)
 add_subdirectory(projectsg)
 add_subdirectory(tests)
+add_subdirectory(doc)
 
 #Add Tests
 enable_testing()
