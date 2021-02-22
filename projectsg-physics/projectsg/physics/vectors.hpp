@@ -13,6 +13,9 @@
 
 #include <cmath>
 
+/**
+ * \brief Unity-like Vector2 Class.
+ */
 class Vector2
 {
 public:
@@ -56,6 +59,8 @@ public:
     static const float Angle(Vector2 from, Vector2 to);
     static const float Distance(Vector2 a, Vector2 b);
     static const float Dot(Vector2 lhs, Vector2 rhs);
+    static const void Lerp(Vector2* current, Vector2* target, float t);
+    static const void MoveTowards(Vector2* current, Vector2* target, float maxDistanceDelta);
 
     bool operator ==(const Vector2& rhs);
     Vector2 operator +(const Vector2& rhs);

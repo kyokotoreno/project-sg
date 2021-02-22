@@ -52,3 +52,22 @@ Vector2 Vector2::operator *(const float& d)
 
     return result;
 }
+
+const void Vector2::Lerp(Vector2* current, Vector2* target, float t)
+{
+        Vector2 vt(target->x - current->x, target->y - current->y);
+        float length = vt.magnitude();
+
+        if (length > t)
+        {
+            // move towards the goal
+            current->x = (current->x + t* vt.x / length);
+            current->y = (current->y + t* vt.y / length);
+        }
+        else
+        {
+            // already there
+            current->x = target->x;
+            current->y = target->y;
+        }
+}
